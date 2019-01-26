@@ -1,6 +1,6 @@
 <h1>Create a New Article!<h1>
 <form action="/articles" method="post">
-  <input type="text" name="article[title]" value="title"> #name becomes attribute of hash
-  <input type="text" name="article[content]" value="content">
+  <input type="text" name="title" value="title"> #name becomes attribute of hash
+  <input type="text" name="content" value="content"> <!--Why couldn't it be name=article[content]?? name references data. Does it have something to do with the params haven't yet been created? What even creates the params???--> 
   <input type="submit" value="submit">
 </form>
