@@ -1,0 +1,12 @@
+<ul>
+<% @articles.each do |article| %> 
+<%# This will interate the @article hash which content all the created articles. We need to interate block in order to display all objects. Otherwise it will just show a hash of id,title,content. %>
+  <li>
+    <a href="/articles/<%= article.id %>"> 
+    <%# This is a link to the individual article. The link is created using the article's unique id number. We then use string interpolation to redirect the user to the appropriate article %>
+      <%= article.title %> 
+    </a>
+  </li>
+<% end %> 
+<%# By interating block, the program will display all articles and grab the id automatically. We don't have to do it manually for each article. For example, if we have 100 articles, the program will list all 100 by itself. Block interation is used to grab and display each and every objects in the hash of params %>
+</ul>
